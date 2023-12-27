@@ -1,0 +1,33 @@
+<br><br>
+<div class="center-div">
+    <div class="user-info">
+        <br>
+        <strong> {{info}}</strong>
+        <br>
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+            <img class="rounded" [src]="user.picture" alt="user img">
+            <h1>Контакты</h1>
+            <div class="left-align">
+                <label for="first_name"><strong>Имя:</strong></label>
+                <input id="first_name" type="text" formControlName="first_name">
+                <br><br>
+                <label for="last_name"><strong>Фамилия:</strong></label>
+                <input id="last_name" type="text" formControlName="last_name">
+                <br><br>
+                <label for="email"><strong>Email:</strong></label>
+                <input id="email" type="email" formControlName="email">
+                <br><br>
+                <label for="phone_number"><strong>Tелефон:</strong></label>
+                <input id="phone_number" type="tel" formControlName="phone_number">
+                <br><br>
+                <label for="password"><strong>Пароль:</strong></label>
+                <input id="password" type="password" formControlName="password">
+                <br><br>
+                <label for="data_processing_consent"><strong>Согласие:</strong></label>
+                <input id="data_processing_consent" type="checkbox" formControlName="data_processing_consent">
+                <br><br>                
+                <button type="submit">Сохранить</button>
+            </div>
+        </form>
+    </div>
+</div>
